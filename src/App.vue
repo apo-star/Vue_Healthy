@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import Container from "./components/Container.vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <Container>
-    <HelloWorld msg="Vite + Vue" />
-  </Container>
+  <Header />
 </template>
 
 <style lang="scss" scoped></style>

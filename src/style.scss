@@ -2,7 +2,9 @@
 @import "./styles/fonts";
 
 :root {
-  --color-primary: #f593ab;
+  --color-primary: #1a1a1a;
+  --color-white: #ffffff;
+  --color-white-rgba: 255, 255, 255;
 }
 
 *,
@@ -22,4 +24,19 @@ body {
 
 body {
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+  background: var(--color-primary);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  /* This inherits all CSS values including `overflow` */
+  all: inherit !important;
 }

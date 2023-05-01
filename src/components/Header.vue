@@ -34,7 +34,11 @@ export default defineComponent({
     <Container>
       <div class="header__inner">
         <a class="header__logo-wrapper" href="/">
-          <img class="header__logo" src="/logo.svg" width="207" />
+          <img
+            class="header__logo"
+            src="../assets/images/logo.svg"
+            width="207"
+          />
         </a>
         <nav class="header__nav">
           <ul class="header__menu menu">

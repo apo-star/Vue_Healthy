@@ -7,6 +7,7 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
+// @ts-ignore
 import { Pagination, Navigation } from "swiper";
 
 export default {

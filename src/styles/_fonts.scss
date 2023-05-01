@@ -17,3 +17,23 @@
     url("/fonts/HelveticaNeue-Bold.woff2") format("woff2"),
     url("/fonts/HelveticaNeue-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "HelveticaNeueCondensed";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("HelveticaNeueCondensed"),
+    url("/fonts/HelveticaNeueCondensed-Regular.woff2") format("woff2"),
+    url("/fonts/HelveticaNeueCondensed-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCondensed";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("HelveticaNeueCondensed"),
+    url("/fonts/HelveticaNeueCondensed-Bold.woff2") format("woff2"),
+    url("/fonts/HelveticaNeueCondensed-Bold.woff") format("woff");
+}

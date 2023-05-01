@@ -50,6 +50,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
   border-bottom: 1px solid rgba(var(--color-white-rgba), 0.1);
   &__inner {
     display: flex;
@@ -72,7 +73,7 @@ export default defineComponent({
       font-weight: 700;
       font-size: rem(14);
       line-height: 1;
-      font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+      font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
     }
   }
 }

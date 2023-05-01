@@ -5,6 +5,7 @@
   --color-primary: #1a1a1a;
   --color-white: #ffffff;
   --color-white-rgba: 255, 255, 255;
+  --color-green: #34c759;
 }
 
 *,
@@ -22,6 +23,10 @@ body {
   cursor: default;
 }
 
+html {
+  font-size: vw(16);
+}
+
 body {
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
   background: var(--color-primary);
@@ -34,9 +39,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-img {
-  /* This inherits all CSS values including `overflow` */
-  all: inherit !important;
 }

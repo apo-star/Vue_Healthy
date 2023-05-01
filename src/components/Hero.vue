@@ -40,7 +40,7 @@ import Button from "./Button.vue";
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("./hero.png") no-repeat 100% 0;
+  background: url("../assets/images/hero.png") no-repeat 100% 0;
   aspect-ratio: 1440 / 1080;
   background-size: cover;
   margin: 0 auto;

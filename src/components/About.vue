@@ -53,16 +53,48 @@ export default {
             :space-between="34"
           >
             <swiper-slide>
-              <div class="about-slider__slide"></div>
+              <div class="about-slider__slide">
+                <picture>
+                  <source
+                    srcset="../assets/images/slider/slide-1.webp"
+                    type="image/webp"
+                  />
+                  <img src="../assets/images/slider/slide-1.png" />
+                </picture>
+              </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="about-slider__slide"></div>
+              <div class="about-slider__slide">
+                <picture>
+                  <source
+                    srcset="../assets/images/slider/slide-2.webp"
+                    type="image/webp"
+                  />
+                  <img src="../assets/images/slider/slide-2.png" />
+                </picture>
+              </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="about-slider__slide"></div>
+              <div class="about-slider__slide">
+                <picture>
+                  <source
+                    srcset="../assets/images/slider/slide-1.webp"
+                    type="image/webp"
+                  />
+                  <img src="../assets/images/slider/slide-1.png" />
+                </picture>
+              </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="about-slider__slide"></div>
+              <div class="about-slider__slide">
+                <picture>
+                  <source
+                    srcset="../assets/images/slider/slide-2.webp"
+                    type="image/webp"
+                  />
+                  <img src="../assets/images/slider/slide-2.png" />
+                </picture>
+              </div>
             </swiper-slide>
           </swiper>
           <button ref="next" class="swiper-button-next"></button>
@@ -107,7 +139,11 @@ export default {
 .about-slider {
   &__slide {
     min-height: rem(273);
-    background: yellow;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>

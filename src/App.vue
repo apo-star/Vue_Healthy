@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import About from "./components/About.vue";
 import Header from "./components/Header.vue";
 import Hero from "./components/Hero.vue";
 </script>
@@ -6,6 +7,7 @@ import Hero from "./components/Hero.vue";
 <template>
   <Header />
   <Hero />
+  <About />
 </template>
 
 <style lang="scss" scoped></style>

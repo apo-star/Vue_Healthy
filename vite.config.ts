@@ -10,6 +10,7 @@ export default defineConfig({
         additionalData: `
           @import "./src/styles/_mixins.scss";
           @import "./src/styles/_fonts.scss";
+          @import "./src/styles/_swiper.scss";
         `,
       },
     },

@@ -1,11 +1,18 @@
 @import "./styles/mixins";
 @import "./styles/fonts";
+@import "./styles/swiper";
 
 :root {
   --color-primary: #1a1a1a;
   --color-white: #ffffff;
   --color-white-rgba: 255, 255, 255;
   --color-green: #34c759;
+  --color-dark: #252525;
+  --color-title: #303030;
+  --color-slider-border: var(--color-title);
+  --color-slider-bg: #262626;
+  --color-subtitle: #d9d9d9;
+  --color-gray: #a6a6a6;
 }
 
 *,

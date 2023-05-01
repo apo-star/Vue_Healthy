@@ -1,9 +1,9 @@
 <script setup lang="ts">
-defineProps<{ title: string; subtitle: string }>();
+defineProps<{ title: string; subtitle: string; className?: string }>();
 </script>
 
 <template>
-  <h2 class="title">
+  <h2 class="title" :class="className">
     {{ title }}
     <span class="subtitle">{{ subtitle }}</span>
   </h2>
@@ -21,6 +21,25 @@ defineProps<{ title: string; subtitle: string }>();
   text-transform: uppercase;
   font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
   left: rem(10);
+  &._big {
+    .subtitle {
+      font-size: rem(36);
+    }
+  }
+  &._line {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: rem(60);
+      height: rem(2);
+      background: var(--color-green);
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: rem(-10);
+    }
+  }
 }
 
 .subtitle {
@@ -38,5 +57,6 @@ defineProps<{ title: string; subtitle: string }>();
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
   margin-top: rem(-5);
   margin-left: rem(-8);
+  text-transform: capitalize;
 }
 </style>

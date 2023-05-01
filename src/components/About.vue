@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 .about {
   margin-top: rem(-240);
-  padding-bottom: rem(300);
+  margin-bottom: rem(60);
   &__inner {
     position: relative;
     padding: rem(60) 0;

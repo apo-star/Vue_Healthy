@@ -2,6 +2,9 @@
 import Container from "./Container.vue";
 import Title from "./Title.vue";
 import { defineComponent } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default defineComponent({
   components: { Container, Title },
@@ -27,6 +30,20 @@ export default defineComponent({
       ],
     };
   },
+  methods: {
+    enter() {
+      gsap.to("[data-directions-item]", {
+        opacity: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".work",
+          markers: false,
+          start: "top 50%",
+          end: "bottom 50%",
+        },
+      });
+    },
+  },
 });
 </script>
 
@@ -37,14 +54,17 @@ export default defineComponent({
         <Title title="work" subtitle="how it works" className="_line _big" />
       </div>
       <ul class="work__list">
-        <li
-          class="work__list-item work-list-item"
-          v-for="item in items"
-          key="item.title"
-        >
-          <p class="work-list-item__title" v-html="item.title" />
-          <p class="work-list-item__text" v-html="item.text" />
-        </li>
+        <transition-group appear @enter="enter">
+          <li
+            class="work__list-item work-list-item"
+            v-for="item in items"
+            key="item.title"
+            data-directions-item
+          >
+            <p class="work-list-item__title" v-html="item.title" />
+            <p class="work-list-item__text" v-html="item.text" />
+          </li>
+        </transition-group>
       </ul>
     </Container>
   </section>
@@ -64,6 +84,7 @@ export default defineComponent({
   }
 
   .work-list-item {
+    opacity: 0;
     padding: rem(22) rem(24) rem(24);
     min-height: rem(206);
     border-radius: rem(6);

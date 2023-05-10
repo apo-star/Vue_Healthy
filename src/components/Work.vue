@@ -72,7 +72,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .work {
-  padding-bottom: rem(100);
+  margin-bottom: rem(90);
   &__title {
     text-align: center;
     margin-bottom: rem(60);

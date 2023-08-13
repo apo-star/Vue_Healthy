@@ -14,10 +14,10 @@ defineProps<{ text: string; className: string }>();
   background: var(--color-green);
   font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
   &._big {
-    padding: rem(25) rem(58);
-    border-radius: rem(43);
+    padding: rv(25) rv(58);
+    border-radius: rv(43);
     font-weight: 700;
-    font-size: rem(18);
+    font-size: rv(18);
     line-height: 1.375rem;
     text-align: center;
     letter-spacing: 0.2em;

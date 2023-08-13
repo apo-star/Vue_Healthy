@@ -60,10 +60,10 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: rem(91);
+    min-height: rv(91);
   }
   &__logo-wrapper {
-    width: rem(207);
+    width: rv(207);
   }
   &__logo {
     width: 100%;
@@ -71,11 +71,11 @@ export default defineComponent({
 
   .menu {
     display: flex;
-    gap: rem(40);
+    gap: rv(40);
     &__link {
       color: var(--color-white);
       font-weight: 700;
-      font-size: rem(14);
+      font-size: rv(14);
       line-height: 1;
       font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
     }

@@ -1,4 +1,4 @@
-@function rem($px, $context: 16) {
+@function rv($px, $context: 16) {
   @return calc(round(calc($px / $context) * 1rem * 10000) / 10000);
 }
 

@@ -14,16 +14,16 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
   display: inline-block;
   position: relative;
   font-weight: 900;
-  font-size: rem(100);
+  font-size: rv(100);
   line-height: 1.5;
   letter-spacing: 0.2em;
   color: var(--color-title);
   text-transform: uppercase;
   font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
-  left: rem(10);
+  left: rv(10);
   &._big {
     .subtitle {
-      font-size: rem(36);
+      font-size: rv(36);
     }
   }
   &._line {
@@ -32,12 +32,12 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
       content: "";
       position: absolute;
       bottom: 0;
-      width: rem(60);
-      height: rem(2);
+      width: rv(60);
+      height: rv(2);
       background: var(--color-green);
       left: 50%;
       transform: translateX(-50%);
-      margin-left: rem(-10);
+      margin-left: rv(-10);
     }
   }
 }
@@ -49,14 +49,14 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
   white-space: nowrap;
   transform: translate(-50%, -50%);
   font-weight: 400;
-  font-size: rem(30);
+  font-size: rv(30);
   line-height: 2;
   letter-spacing: 0.2em;
   color: var(--color-subtitle);
   text-transform: initial;
   font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
-  margin-top: rem(-5);
-  margin-left: rem(-8);
+  margin-top: rv(-5);
+  margin-left: rv(-8);
   text-transform: capitalize;
 }
 </style>

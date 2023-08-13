@@ -56,7 +56,7 @@ export default defineComponent({
 .dishes {
   &__wrap {
     display: grid;
-    gap: rem(30);
+    gap: rv(30);
     grid-template-columns: repeat(3, 1fr);
   }
   &__title {

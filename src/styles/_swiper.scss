@@ -4,27 +4,27 @@
   z-index: 3;
   top: 50%;
   transform: translateY(-50%);
-  width: rem(60);
-  height: rem(60);
+  width: rv(60);
+  height: rv(60);
   background: var(--color-slider-bg);
-  border: rem(2) solid var(--color-slider-border);
+  border: rv(2) solid var(--color-slider-border);
   border-radius: 50%;
-  left: rem(-124);
+  left: rv(-124);
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: rem(16);
-    height: rem(16);
+    width: rv(16);
+    height: rv(16);
     background: url("../assets/images/icons/arrow-slider.svg") no-repeat center
       center;
     background-size: cover;
   }
 }
 .swiper-button-next {
-  right: rem(-124);
+  right: rv(-124);
   left: auto;
   &::before {
     transform: translate(-50%, -50%) scale(-1, 1);

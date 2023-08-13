@@ -106,39 +106,39 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  margin-top: rem(-240);
-  margin-bottom: rem(60);
+  margin-top: rv(-240);
+  margin-bottom: rv(60);
   &__inner {
     position: relative;
-    padding: rem(60) 0;
+    padding: rv(60) 0;
     text-align: center;
     background: var(--color-dark);
-    min-height: rem(736);
-    box-shadow: 0 rem(2) rem(5) rgba(0, 0, 0, 0.1);
+    min-height: rv(736);
+    box-shadow: 0 rv(2) rv(5) rgba(0, 0, 0, 0.1);
   }
   &__title {
-    margin-bottom: rem(12);
+    margin-bottom: rv(12);
   }
   &__text {
     font-weight: 400;
-    font-size: rem(16);
+    font-size: rv(16);
     line-height: 1.88;
     text-align: center;
-    max-width: rem(734);
+    max-width: rv(734);
     margin: 0 auto;
-    margin-bottom: rem(90);
+    margin-bottom: rv(90);
     color: var(--color-gray);
   }
   &__slider {
     position: relative;
-    max-width: rem(734);
+    max-width: rv(734);
     margin: 0 auto;
   }
 }
 
 .about-slider {
   &__slide {
-    min-height: rem(273);
+    min-height: rv(273);
     img {
       width: 100%;
       height: 100%;

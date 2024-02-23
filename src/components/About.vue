@@ -56,10 +56,10 @@ export default {
               <div class="about-slider__slide">
                 <picture>
                   <source
-                    srcset="../assets/images/slider/slide-1.webp"
+                    srcset="/images/slider/slide-1.webp"
                     type="image/webp"
                   />
-                  <img src="../assets/images/slider/slide-1.png" />
+                  <img src="/images/slider/slide-1.png" />
                 </picture>
               </div>
             </swiper-slide>
@@ -67,10 +67,10 @@ export default {
               <div class="about-slider__slide">
                 <picture>
                   <source
-                    srcset="../assets/images/slider/slide-2.webp"
+                    srcset="/images/slider/slide-2.webp"
                     type="image/webp"
                   />
-                  <img src="../assets/images/slider/slide-2.png" />
+                  <img src="/images/slider/slide-2.png" />
                 </picture>
               </div>
             </swiper-slide>
@@ -78,10 +78,10 @@ export default {
               <div class="about-slider__slide">
                 <picture>
                   <source
-                    srcset="../assets/images/slider/slide-1.webp"
+                    srcset="/images/slider/slide-1.webp"
                     type="image/webp"
                   />
-                  <img src="../assets/images/slider/slide-1.png" />
+                  <img src="/images/slider/slide-1.png" />
                 </picture>
               </div>
             </swiper-slide>
@@ -89,10 +89,10 @@ export default {
               <div class="about-slider__slide">
                 <picture>
                   <source
-                    srcset="../assets/images/slider/slide-2.webp"
+                    srcset="/images/slider/slide-2.webp"
                     type="image/webp"
                   />
-                  <img src="../assets/images/slider/slide-2.png" />
+                  <img src="/images/slider/slide-2.png" />
                 </picture>
               </div>
             </swiper-slide>

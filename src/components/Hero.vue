@@ -14,22 +14,19 @@ import Button from "./Button.vue";
     </div>
     <ul class="hero__list hero-list">
       <li>
-        <img class="hero-list__icon" src="../assets/images/icons/clock.svg" />
+        <img class="hero-list__icon" src="/images/icons/clock.svg" />
         <p class="hero-list__title">
           Today&nbsp;10:00&nbsp;am&nbsp;&mdash; 7:00&nbsp;pm
         </p>
         <p class="hero-list__text">Working hours</p>
       </li>
       <li>
-        <img
-          class="hero-list__icon"
-          src="../assets/images/icons/location.svg"
-        />
+        <img class="hero-list__icon" src="/images/icons/location.svg" />
         <p class="hero-list__title">Velyka Vasylkivska 100</p>
         <p class="hero-list__text">Get Directions</p>
       </li>
       <li>
-        <img class="hero-list__icon" src="../assets/images/icons/phone.svg" />
+        <img class="hero-list__icon" src="/images/icons/phone.svg" />
         <a class="hero-list__title" href="tel:+380638332415"
           >+38 (063)833 24 15</a
         >
@@ -45,7 +42,7 @@ import Button from "./Button.vue";
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../assets/images/hero.png") no-repeat 100% 0;
+  background: url("/images/hero.png") no-repeat 100% 0;
   aspect-ratio: 1440 / 1080;
   background-size: cover;
   margin: 0 auto;

@@ -46,47 +46,47 @@ import Button from "./Button.vue";
   aspect-ratio: 1440 / 1080;
   background-size: cover;
   margin: 0 auto;
-  margin-top: rv(-92);
+  margin-top: rem(-92);
   &__text {
-    margin-top: rv(-65);
-    max-width: rv(595);
+    margin-top: rem(-65);
+    max-width: rem(595);
     text-align: center;
-    margin-bottom: rv(42);
+    margin-bottom: rem(42);
     font-size: erm(16);
     line-height: 1.62;
-    letter-spacing: rv(-0.02);
+    letter-spacing: rem(-0.02);
     color: rgba($color: var(--color-white-rgba), $alpha: 0.7);
   }
   &__button {
-    margin-bottom: rv(70);
+    margin-bottom: rem(70);
   }
 }
 
 .hero-list {
   display: grid;
-  grid-template-columns: repeat(3, rv(245));
-  gap: rv(90);
+  grid-template-columns: repeat(3, rem(245));
+  gap: rem(90);
   text-align: center;
   color: var(--color-white);
   &__icon {
     display: block;
     margin: 0 auto;
-    width: rv(18);
-    height: rv(18);
-    margin-bottom: rv(16);
+    width: rem(18);
+    height: rem(18);
+    margin-bottom: rem(16);
     object-fit: cover;
   }
   &__title {
     font-weight: 400;
-    font-size: rv(16);
+    font-size: rem(16);
     line-height: 1.88;
     text-align: center;
     color: var(--color-white);
-    margin-bottom: rv(5);
+    margin-bottom: rem(5);
   }
   &__text {
     font-weight: 400;
-    font-size: rv(14);
+    font-size: rem(14);
     line-height: 1;
     color: rgba($color: var(--color-white-rgba), $alpha: 0.5);
   }

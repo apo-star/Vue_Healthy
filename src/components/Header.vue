@@ -1,45 +1,37 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import Container from "./Container.vue";
 
-export default defineComponent({
-  components: { Container },
-  data() {
-    return {
-      menu: [
-        {
-          link: "#",
-          name: "Menu",
-        },
-        {
-          link: "#",
-          name: "Recipes",
-        },
-        {
-          link: "#",
-          name: "Chefs",
-        },
-        {
-          link: "#",
-          name: "Contacts",
-        },
-      ],
-    };
+const menu = [
+  {
+    link: "#",
+    name: "Menu",
   },
-});
+  {
+    link: "#",
+    name: "Recipes",
+  },
+  {
+    link: "#",
+    name: "Chefs",
+  },
+  {
+    link: "#",
+    name: "Contacts",
+  },
+];
 </script>
 
 <template>
   <header class="header">
     <Container>
       <div class="header__inner">
-        <a class="header__logo-wrapper" href="/">
-          <img class="header__logo" src="/images/logo.svg" width="207" />
+        <a class="header__logo-wrapper" href="/" aria-label="logo">
+          <img class="header__logo" src="/images/logo.svg" />
         </a>
         <nav class="header__nav">
           <ul class="header__menu menu">
-            <li class="menu__item" v-for="item in menu" key="item.name">
-              <a class="menu__link" href="#">{{ item.name }}</a>
+            <li class="menu__item" v-for="item in menu" :key="item.name">
+              <a class="menu__link" :href="item.link">{{ item.name }}</a>
             </li>
           </ul>
         </nav>
@@ -56,10 +48,10 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: rv(91);
+    min-height: rem(91);
   }
   &__logo-wrapper {
-    width: rv(207);
+    width: rem(207);
   }
   &__logo {
     width: 100%;
@@ -67,11 +59,11 @@ export default defineComponent({
 
   .menu {
     display: flex;
-    gap: rv(40);
+    gap: rem(40);
     &__link {
       color: var(--color-white);
       font-weight: 700;
-      font-size: rv(14);
+      font-size: rem(14);
       line-height: 1;
       font-family: "HelveticaNeueCondensed", Arial, Helvetica, sans-serif;
     }

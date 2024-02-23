@@ -13,13 +13,13 @@ export default defineComponent({
         {
           img: "1",
           title: "Featured Meal",
-          subtitle: "Served with french fries + drink",
+          subtitle: "Seremed with french fries + drink",
           text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
         },
         {
           img: "2",
           title: "Featured Meal",
-          subtitle: "Served with french fries + drink",
+          subtitle: "Seremed with french fries + drink",
           text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
         },
       ],
@@ -56,7 +56,7 @@ export default defineComponent({
 .dishes {
   &__wrap {
     display: grid;
-    gap: rv(30);
+    gap: rem(30);
     grid-template-columns: repeat(3, 1fr);
   }
   &__title {

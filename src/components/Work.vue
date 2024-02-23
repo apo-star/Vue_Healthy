@@ -72,22 +72,22 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .work {
-  margin-bottom: rv(90);
+  margin-bottom: rem(90);
   &__title {
     text-align: center;
-    margin-bottom: rv(60);
+    margin-bottom: rem(60);
   }
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: rv(30);
+    gap: rem(30);
   }
 
   .work-list-item {
     opacity: 0;
-    padding: rv(22) rv(24) rv(24);
-    min-height: rv(206);
-    border-radius: rv(6);
+    padding: rem(22) rem(24) rem(24);
+    min-height: rem(206);
+    border-radius: rem(6);
     background: var(--color-dark);
     overflow: hidden;
     transition: all 200ms linear;
@@ -108,24 +108,24 @@ export default defineComponent({
     }
     &__title {
       position: relative;
-      font-size: rv(22);
+      font-size: rem(22);
       color: var(--color-white);
-      padding-bottom: rv(18);
-      margin-bottom: rv(24);
+      padding-bottom: rem(18);
+      margin-bottom: rem(24);
       text-transform: capitalize;
       &::after {
         content: "";
         position: absolute;
         left: 0;
         bottom: 0;
-        width: rv(56);
-        height: rv(2);
+        width: rem(56);
+        height: rem(2);
         background: var(--color-green);
       }
     }
     &__text {
       font-weight: 400;
-      font-size: rv(13);
+      font-size: rem(13);
       line-height: 1.38;
       color: rgba(var(--color-white-rgba), 0.5);
     }

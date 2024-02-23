@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 import Container from "./Container.vue";
 import Title from "./Title.vue";
 
@@ -7,35 +7,22 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
-// @ts-ignore
 import { Pagination, Navigation } from "swiper/modules";
 
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    Container,
-    Title,
-  },
-  setup() {
-    const prev = ref(null);
-    const next = ref(null);
-    return {
-      modules: [Pagination, Navigation],
-      prev,
-      next,
-    };
-  },
-};
+const prev = ref(null);
+const next = ref(null);
+const modules = [Pagination, Navigation];
 </script>
 
 <template>
   <section class="about">
     <Container>
       <div class="about__inner">
-        <div class="about__title">
-          <Title title="About" subtitle="The Basics Of Healthy Food" />
-        </div>
+        <Title
+          title="About"
+          subtitle="The Basics Of Healthy Food"
+          className="about__title"
+        />
         <p class="about__text">
           In&nbsp;aliqua ea&nbsp;ullamco ad&nbsp;est ex&nbsp;non deserunt nulla.
           Consectetur sint ea&nbsp;aliquip aliquip consectetur voluptate est.

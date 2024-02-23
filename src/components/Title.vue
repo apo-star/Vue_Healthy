@@ -4,8 +4,7 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
 
 <template>
   <h2 class="title" :class="className">
-    {{ title }}
-    <span class="subtitle">{{ subtitle }}</span>
+    {{ title }}<span class="subtitle">{{ subtitle }}</span>
   </h2>
 </template>
 

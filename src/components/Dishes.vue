@@ -1,31 +1,28 @@
-<script lang="ts">
+<script setup lang="ts">
 import Container from "./Container.vue";
 import Title from "./Title.vue";
 import Dishe from "./Dishe.vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  components: { Container, Title, Dishe },
-  data() {
-    return {
-      title: "sdf",
-      items: [
-        {
-          img: "1",
-          title: "Featured Meal",
-          subtitle: "Seremed with french fries + drink",
-          text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
-        },
-        {
-          img: "2",
-          title: "Featured Meal",
-          subtitle: "Seremed with french fries + drink",
-          text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
-        },
-      ],
-    };
+const items = [
+  {
+    img: "/images/dishes/dishe-1.png",
+    title: "Featured Meal",
+    subtitle: "Seremed with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
   },
-});
+  {
+    img: "/images/dishes/dishe-2.png",
+    title: "Featured Meal",
+    subtitle: "Seremed with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
+  },
+  {
+    img: "/images/dishes/dishe-3.png",
+    title: "Featured Meal",
+    subtitle: "Seremed with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
+  },
+];
 </script>
 
 <template>
@@ -40,12 +37,12 @@ export default defineComponent({
       </div>
       <div class="dishes__wrap">
         <Dishe
+          v-for="{ title, subtitle, text, img } in items"
           :title="title"
           :subtitle="subtitle"
           :text="text"
           :img="img"
-          v-for="{ title, subtitle, text, img } in items"
-          key="item.name"
+          :key="title"
         />
       </div>
     </Container>

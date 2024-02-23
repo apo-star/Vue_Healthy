@@ -1,49 +1,41 @@
-<script lang="ts">
+<script setup lang="ts">
+import { onMounted } from "vue";
 import Container from "./Container.vue";
 import Title from "./Title.vue";
-import { defineComponent } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export default defineComponent({
-  components: { Container, Title },
-  data() {
-    return {
-      items: [
-        {
-          title: "Pick meals",
-          text: "Choose your meals from our diverse weekly menu. Find gluten or&nbsp;dairy free, low carb &amp;&nbsp;veggie options.",
-        },
-        {
-          title: "Choose how often",
-          text: "Our team of&nbsp;chefs do&nbsp;the prep work&nbsp;&mdash; no&nbsp;more chopping, measuring, or&nbsp;sink full of&nbsp;dishes!",
-        },
-        {
-          title: "Fast deliveries",
-          text: "Your freshly prepped 15-min dinner kits arrive on&nbsp;your doorstep in&nbsp;a&nbsp;refrigerated box.",
-        },
-        {
-          title: "tasty meals",
-          text: "Gobble makes cooking fast, so&nbsp;you have more time to&nbsp;unwind and be&nbsp;with family.",
-        },
-      ],
-    };
+const items = [
+  {
+    title: "Pick meals",
+    text: "Choose your meals from our diverse weekly menu. Find gluten or&nbsp;dairy free, low carb &amp;&nbsp;veggie options.",
   },
-  methods: {
-    enter() {
-      gsap.to("[data-directions-item]", {
-        opacity: 1,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: ".work",
-          markers: false,
-          start: "top 50%",
-          end: "bottom 50%",
-        },
-      });
+  {
+    title: "Choose how often",
+    text: "Our team of&nbsp;chefs do&nbsp;the prep work&nbsp;&mdash; no&nbsp;more chopping, measuring, or&nbsp;sink full of&nbsp;dishes!",
+  },
+  {
+    title: "Fast deliveries",
+    text: "Your freshly prepped 15-min dinner kits arrive on&nbsp;your doorstep in&nbsp;a&nbsp;refrigerated box.",
+  },
+  {
+    title: "tasty meals",
+    text: "Gobble makes cooking fast, so&nbsp;you have more time to&nbsp;unwind and be&nbsp;with family.",
+  },
+];
+
+onMounted(() => {
+  gsap.to("[data-directions-item]", {
+    opacity: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".work",
+      markers: false,
+      start: "top 50%",
+      end: "bottom 50%",
     },
-  },
+  });
 });
 </script>
 
@@ -54,15 +46,15 @@ export default defineComponent({
         <Title title="work" subtitle="how it works" className="_line _big" />
       </div>
       <ul class="work__list">
-        <transition-group appear @enter="enter">
+        <transition-group appear>
           <li
-            class="work__list-item work-list-item"
             v-for="item in items"
-            key="item.title"
+            class="work__list-item work-list-item"
             data-directions-item
+            :key="item.title"
           >
-            <p class="work-list-item__title" v-html="item.title" />
-            <p class="work-list-item__text" v-html="item.text" />
+            <p class="work-list-item__title">{{ item.title }}</p>
+            <p class="work-list-item__text">{{ item.text }}</p>
           </li>
         </transition-group>
       </ul>
@@ -84,6 +76,7 @@ export default defineComponent({
   }
 
   .work-list-item {
+    $this: &;
     opacity: 0;
     padding: rem(22) rem(24) rem(24);
     min-height: rem(206);
@@ -94,14 +87,14 @@ export default defineComponent({
     &:hover {
       transition: all 200ms linear;
       background: var(--color-green);
-      .work-list-item__title {
+      #{$this}__title {
         color: var(--color-dark-2);
         transition: all 200ms linear;
         &::after {
           background: var(--color-dark-2);
         }
       }
-      .work-list-item__text {
+      #{$this}__text {
         color: var(--color-dark-2);
         transition: color 200ms linear;
       }

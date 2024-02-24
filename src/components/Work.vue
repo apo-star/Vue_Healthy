@@ -53,8 +53,8 @@ onMounted(() => {
             data-directions-item
             :key="item.title"
           >
-            <p class="work-list-item__title">{{ item.title }}</p>
-            <p class="work-list-item__text">{{ item.text }}</p>
+            <p class="work-list-item__title" v-html="item.title" />
+            <p class="work-list-item__text" v-html="item.text" />
           </li>
         </transition-group>
       </ul>

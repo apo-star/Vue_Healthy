@@ -7,19 +7,37 @@ const items = [
   {
     img: "/images/dishes/dishe-1.png",
     title: "Featured Meal",
-    subtitle: "Seremed with french fries + drink",
+    subtitle: "Served with french fries + drink",
     text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
   },
   {
     img: "/images/dishes/dishe-2.png",
     title: "Featured Meal",
-    subtitle: "Seremed with french fries + drink",
+    subtitle: "Served with french fries + drink",
     text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
   },
   {
     img: "/images/dishes/dishe-3.png",
     title: "Featured Meal",
-    subtitle: "Seremed with french fries + drink",
+    subtitle: "Served with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
+  },
+  {
+    img: "/images/dishes/dishe-4.png",
+    title: "Featured Meal",
+    subtitle: "Served with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
+  },
+  {
+    img: "/images/dishes/dishe-5.png",
+    title: "Featured Meal",
+    subtitle: "Served with french fries + drink",
+    text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
+  },
+  {
+    img: "/images/dishes/dishe-6.png",
+    title: "Featured Meal",
+    subtitle: "Served with french fries + drink",
     text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
   },
 ];
@@ -28,13 +46,11 @@ const items = [
 <template>
   <section class="dishes">
     <Container>
-      <div class="dishes__title">
-        <Title
-          title="dishes"
-          subtitle="Dish Of The Day"
-          className="_line _big"
-        />
-      </div>
+      <Title
+        title="dishes"
+        subtitle="Dish Of The Day"
+        className="dishes__title _line _big"
+      />
       <div class="dishes__wrap">
         <Dishe
           v-for="{ title, subtitle, text, img } in items"
@@ -51,6 +67,7 @@ const items = [
 
 <style lang="scss" scoped>
 .dishes {
+  padding-bottom: rem(90);
   &__wrap {
     display: grid;
     gap: rem(30);
@@ -58,6 +75,9 @@ const items = [
   }
   &__title {
     text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: rem(60);
   }
 }
 </style>

@@ -1,7 +1,39 @@
 <script setup lang="ts">
-defineProps<{ title: string; subtitle: string; className?: string }>();
-</script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted } from "vue";
+gsap.registerPlugin(ScrollTrigger);
 
+defineProps<{ title: string; subtitle: string; className?: string }>();
+
+onMounted(() => {
+  const titles = gsap.utils.toArray(".title");
+  titles.forEach((title: any) => {
+    gsap.to(title, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: title,
+        start: "top 50%",
+        end: "bottom 50%",
+        markers: true,
+      },
+    });
+  });
+
+  const subtitles = gsap.utils.toArray(".subtitle");
+  subtitles.forEach((subtitle: any) =>
+    gsap.to(subtitle, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: subtitle,
+        start: "top 50%",
+        end: "bottom 50%",
+        markers: true,
+      },
+    })
+  );
+});
+</script>
 <template>
   <h2 class="title" :class="className">
     {{ title }}<span class="subtitle">{{ subtitle }}</span>
@@ -13,6 +45,7 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
   display: inline-block;
   position: relative;
   font-weight: 900;
+  opacity: 0;
   font-size: rem(100);
   line-height: 1.5;
   letter-spacing: 0.2em;
@@ -45,6 +78,7 @@ defineProps<{ title: string; subtitle: string; className?: string }>();
   position: absolute;
   left: 50%;
   top: 50%;
+  opacity: 0;
   white-space: nowrap;
   transform: translate(-50%, -50%);
   font-weight: 400;

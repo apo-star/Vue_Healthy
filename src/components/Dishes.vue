@@ -3,6 +3,11 @@ import Container from "./Container.vue";
 import Title from "./Title.vue";
 import Dishe from "./Dishe.vue";
 
+import { onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const items = [
   {
     img: "/images/dishes/dishe-1.png",
@@ -41,6 +46,32 @@ const items = [
     text: "Choice of: Coke, Fanta, Sprite, Upgrade to&nbsp;large fries, Add whopper patty, Add Tender crisp patty and more...",
   },
 ];
+
+onMounted(() => {
+  const createTimeline = () =>
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".dishes__wrap",
+        markers: false,
+        start: "top 50%",
+        end: "bottom 50%",
+      },
+    });
+
+  const cardsTimeline = createTimeline();
+  const titlesAndSubtitlesTimeline = createTimeline();
+
+  cardsTimeline.to("[data-dishe-item]", {
+    opacity: 1,
+    stagger: 0.4,
+  });
+
+  titlesAndSubtitlesTimeline.to(".dishe__title", {
+    x: 0,
+    opacity: 1,
+    stagger: 0.4,
+  });
+});
 </script>
 
 <template>
@@ -59,6 +90,7 @@ const items = [
           :text="text"
           :img="img"
           :key="title"
+          data-dishe-item
         />
       </div>
     </Container>

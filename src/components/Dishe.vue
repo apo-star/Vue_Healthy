@@ -32,6 +32,7 @@ defineProps<{ title: string; subtitle: string; text: string; img: string }>();
   color: var(--color-light-gray);
   box-shadow: 0 rem(2) rem(5) 0 rgba(0, 0, 0, 0.1);
   background: var(--color-dark);
+  opacity: 0;
   &__content {
     padding: rem(26) rem(30) rem(24);
   }
@@ -40,12 +41,15 @@ defineProps<{ title: string; subtitle: string; text: string; img: string }>();
     line-height: 93.75%;
     color: var(--color-subtitle);
     margin-bottom: rem(3);
+    transform: translateX(rem(-200));
+    opacity: 0;
   }
   &__subtitle {
     font-size: rem(12);
     line-height: 1.33;
     margin-bottom: rem(20);
     letter-spacing: -0.15px;
+    opacity: 0;
   }
   &__text {
     font-size: rem(13);

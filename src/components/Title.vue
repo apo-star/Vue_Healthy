@@ -15,7 +15,7 @@ onMounted(() => {
         trigger: title,
         start: "top 50%",
         end: "bottom 50%",
-        markers: true,
+        markers: false,
       },
     });
   });
@@ -28,7 +28,7 @@ onMounted(() => {
         trigger: subtitle,
         start: "top 50%",
         end: "bottom 50%",
-        markers: true,
+        markers: false,
       },
     })
   );
